@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modalities</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: rgba(0.1, 32, 230, 0.81);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .element-container {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .element-image {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+        .link {
+            position: absolute;
+            color: rgba(0, 0, 0, 0);
+            font-size: 1.7rem;
+            text-decoration: none;
+            z-index: 10;
+            transition: color 0.3s;
+        }
+        /* Adjust link positions as needed */
+        .link.modality1 { top: 35%; left: 45%; }
+        .link.modality2 { top: 47%; left: 45%; }
+        .link.modality3 { top: 60%; left: 45%; }
+
+        @media (max-width: 768px) {
+            .element-image {
+                max-width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .element-image {
+                max-width: 100%;
+            }
+        }
+        
+        .cardinal-sign, .fixed-sign, .mutable-sign {
+            position: absolute;
+            color: rgba(0, 0, 0, 0);
+            font-size: 1.7rem;
+            text-decoration: none;
+            transition: color 0.3s;
+            z-index: 10;
+        }
+        
+        /* Positioning for cardinal signs */
+        .cardinal-sign.aries { top: 25%; left: 26%; }
+        .cardinal-sign.cancer { top: 25%; left: 38%; }
+        .cardinal-sign.libra { top: 25%; left: 52%; }
+        .cardinal-sign.capricorn { top: 25%; left: 63%; }
+
+        /* Positioning for fixed signs */
+        .fixed-sign.taurus { top: 25%; left: 26%; }
+        .fixed-sign.leo { top: 25%; left: 40%; }
+        .fixed-sign.scorpio { top: 25%; left: 52%; }
+        .fixed-sign.aquarius { top: 25%; left: 67%; }
+
+        /* Positioning for mutable signs */
+        .mutable-sign.gemini { top: 25%; left: 26%; }
+        .mutable-sign.virgo { top: 25%; left: 39%; }
+        .mutable-sign.sagittarius { top: 25%; left: 50%; }
+        .mutable-sign.pisces { top: 25%; left: 67%; }
+
+        /* Peek container styles */
+        .peek-container {
+            position: absolute; /* Change to absolute positioning */
+            top: 28px; /* Distance from the top */
+            left: 34px; /* Distance from the left */
+            z-index: 20; /* Ensure it appears above other elements */
+        }
+
+        .peek-icon {
+            width: 50px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .peek-title {
+            display: block;
+            margin-top: 5px;
+            color: white; /* Change color as needed */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.2em; /* Adjust font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="element-container">
+        <img src="./images/Modality screen.png" alt="Overview of Modalities" class="element-image">
+        <a href="#modality1" class="link modality1" aria-label="Go to Modality 1">Modality 1</a>
+        <a href="#modality2" class="link modality2" aria-label="Go to Modality 2">Modality 2</a>
+        <a href="#modality3" class="link modality3" aria-label="Go to Modality 3">Modality 3</a>
+    </div>
+    
+   <!-- Cardinal Signs Section -->
+<div class="element-container">
+    <img id="modality1" src="./images/Cardinal screen.png" alt="Cardinal Screen" class="element-image">
+    <a href="./12 Signs/aries.html" class="link cardinal-sign aries" aria-label="Go to Aries page">Aries</a>
+    <a href="./12 Signs/cancer.html" class="link cardinal-sign cancer" aria-label="Go to Cancer page">Cancer</a>
+    <a href="./12 Signs/libra.html" class="link cardinal-sign libra" aria-label="Go to Libra page">Libra</a>
+    <a href="./12 Signs/capricorn.html" class="link cardinal-sign capricorn" aria-label="Go to Capricorn page">Capricorn</a>
+    <a href="#modality2" class="link modality2" aria-label="Go to Modality 2">Modality 2</a>
+</div>
+
+<!-- Fixed Signs Section -->
+<div class="element-container">
+    <img id="modality2" src="./images/Fixed screen.png" alt="Fixed Screen" class="element-image">
+    <a href="./12 Signs/taurus.html" class="link fixed-sign taurus" aria-label="Go to Taurus page">Taurus</a>
+    <a href="./12 Signs/leo.html" class="link fixed-sign leo" aria-label="Go to Leo page">Leo</a>
+    <a href="./12 Signs/scorpio.html" class="link fixed-sign scorpio" aria-label="Go to Scorpio page">Scorpio</a>
+    <a href="./12 Signs/aquarius.html" class="link fixed-sign aquarius" aria-label="Go to Aquarius page">Aquarius</a>
+    <a href="#modality3" class="link modality3" aria-label="Go to Modality 3">Modality 3</a>
+</div>
+
+<!-- Mutable Signs Section -->
+<div class="element-container">
+    <img id="modality3" src="./images/Mutable screen.png" alt="Mutable Screen" class="element-image">
+    <a href="./12 Signs/gemini.html" class="link mutable-sign gemini" aria-label="Go to Gemini page">Gemini</a>
+    <a href="./12 Signs/virgo.html" class="link mutable-sign virgo" aria-label="Go to Virgo page">Virgo</a>
+    <a href="./12 Signs/sagittarius.html" class="link mutable-sign sagittarius" aria-label="Go to Sagittarius page">Sagittarius</a>
+    <a href="./12 Signs/pisces.html" class="link mutable-sign pisces" aria-label="Go to Pisces page">Pisces</a>
+    <a href="#overview" class="link overview" aria-label="Go to Overview page">Overview</a>
+</div>
+<!-- Add the Vector icon for home navigation -->
+<div class="peek-container">
+    <a href="./index.html/home.html"> <!-- Change to your home page link -->
+        <img src="./icons/Vector.png" alt="Home Icon" class="peek-icon">
+    </a>
+    <a href="./index.html/home.html" class="peek-title"></a>
+</div>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Individual Signs</title>
+    
+    <!-- Link to external stylesheet -->
+    <link href="../styles/site.css" rel="stylesheet">
+
+    <style>
+        /* General body styles */
+        body {
+            min-height: 100vh; /* Use min-height for full viewport */
+            margin: 0; /* Reset default margin */
+            color: white; /* Set default text color */
+            position: relative;
+            overflow: hidden; /* Prevent scrolling */
+        }
+
+        /* Overlay styles */
+        body::before {
+            content: '';
+            position: fixed; /* Change to fixed so it covers the viewport */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0.1, 32, 230, 0.81);
+            z-index: 1; /* Overlay on top of the background */
+        }
+
+        /* Background image styles */
+        body::after {
+            content: '';
+            position: fixed; /* Change to fixed for background */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url(./images/bg-starts.jpg) center / cover no-repeat;
+            z-index: 0; /* Background image behind the overlay */
+        }
+
+        /* Header styles */
+        header {
+            text-align: center; /* Center the header text */
+            padding: 10px; /* Padding for the header */
+            position: relative; /* Ensure header is above overlay */
+            z-index: 2; /* Header above overlay and background */
+            margin: 0; /* Reset margin */
+            font-family: 'Kapakana', cursive; /* Apply Kapakana font */
+            font-style: italic;
+            font-size: larger;
+            font-weight: lighter;
+        }
+
+        /* Target element styles */
+        #target-element {
+            margin: 0; /* Reset margin */
+            padding: 10px; /* Padding for content */
+            text-align: center; /* Center-align text */
+            position: relative; /* Ensure content is above overlay */
+            z-index: 2; /* Content above overlay and background */
+            display: flex;
+            flex-direction: column; /* Stack rows vertically */
+            justify-content: center; /* Center content vertically */
+            height: 100%; /* Take full height */
+        }
+
+        /* Image row styles */
+        .image-row {
+            display: flex; /* Use flexbox for layout */
+            justify-content: center; /* Center images within the row */
+            margin: 0; /* Remove margin to fit better */
+        }
+
+        /* Image styles */
+        img {
+            width: 120px; /* Increased width for the images */
+            height: auto; /* Maintain aspect ratio */
+            margin: 10px; /* Adjust space between images */
+            transition: transform 0.2s; /* Add a little zoom effect */
+        }
+
+        /* Hover effect */
+        img:hover {
+            transform: scale(1.05); /* Zoom in on hover */
+        }
+
+        /* Peek container styles */
+        .peek-container {
+            position: fixed; /* Change to fixed positioning */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            z-index: 2; /* Ensure it appears above other elements */
+            text-align: left; /* Align text to the left */
+        }
+
+        .peek-icon {
+            width: 50px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .peek-title {
+            display: block;
+            margin-top: 5px;
+            color: white; /* Change color as needed */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.2em; /* Adjust font size */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Individual Signs</h1>
+    </header>
+
+    <div id="target-element">
+        <div class="image-row">
+            <a href="./12 Signs/aries.html"><img src="images/Aries.png" alt="Aries Image"></a>
+            <a href="./12 Signs/taurus.html"><img src="images/Taurus.png" alt="Taurus Image"></a>
+            <a href="./12 Signs/gemini.html"><img src="images/Gemini.png" alt="Gemini Image"></a>
+            <a href="./12 Signs/cancer.html"><img src="images/Cancer.png" alt="Cancer Image"></a>
+        </div>
+        <div class="image-row">
+            <a href="./12 Signs/leo.html"><img src="images/Leo.png" alt="Leo Image"></a>
+            <a href="./12 Signs/virgo.html"><img src="images/Virgo.png" alt="Virgo Image"></a>
+            <a href="./12 Signs/libra.html"><img src="images/Libra.png" alt="Libra Image"></a>
+            <a href="./12 Signs/scorpio.html"><img src="images/Scorpio.png" alt="Scorpio Image"></a>
+        </div>
+        <div class="image-row">
+            <a href="./12 Signs/sagittarius.html"><img src="images/Sagittarius.png" alt="Sagittarius Image"></a>
+            <a href="./12 Signs/capricorn.html"><img src="images/Capricorn.png" alt="Capricorn Image"></a>
+            <a href="./12 Signs/aquarius.html"><img src="images/Aquarius.png" alt="Aquarius Image"></a>
+            <a href="./12 Signs/pisces.html"><img src="images/Pisces.png" alt="Pisces Image"></a>
+        </div>
+    </div>
+
+    <!-- Add the Vector icon for home navigation -->
+    <div class="peek-container">
+        <a href="./index.html/home.html"> <!-- Change to your home page link -->
+            <img src="./icons/Vector.png" alt="Home Icon" class="peek-icon">
+        </a>
+        <a href="/Users/kristinefeng/Desktop/Peek Site/index.html/home.html" class="peek-title"></a>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="../script.js"></script>
+</body>
+</html>
