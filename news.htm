@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Latest News</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="../styles/site.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: rgba(1, 32, 230, 0.81);
+            background-image: url(./images/bg-starts.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center; 
+        }
+
+        .container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1; 
+        }
+
+        header {
+            width: 100%;
+            height: 80px;
+            background: rgba(14, 11, 92, 0.8);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            position: absolute;
+            top: 40px;
+            right: 20px;
+            z-index: 2; 
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0; 
+            margin: 0; 
+            display: flex; 
+            flex-direction: row;
+        }
+
+        .nav-item {
+            position: relative;
+            margin-left: 20px; 
+        }
+
+        .nav-item a {
+            display: block;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(14, 11, 92, 0.9);
+            z-index: 2; 
+        }
+
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .dropdown a:hover {
+            background: rgba(255, 255, 255, 0.2); 
+        }
+
+        .news-container {
+            position: relative; 
+            z-index: 2; 
+            padding: 100px 20px; /* Padding for content */
+            text-align: center; /* Center align text */
+            color: white; /* Text color */
+        }
+
+        .news-title {
+            font-size: 50px;
+            color:white;
+            font-family: Kapakana, cursive;
+            font-weight: 300;
+            font-style: italic;
+        }
+
+        .news-text {
+            font-size: 24px; /* Adjusted size for description */
+            margin-top: 20px;
+        }
+
+        .articles-title {
+            font-size: 36px; /* Title for articles section */
+            margin-top: 40px;
+        }
+
+        .articles-list {
+            margin-top: 20px; /* Space above list */
+            text-align: left; /* Align text to the left */
+        }
+
+        .article-item {
+            background-color: rgba(255, 255, 255, 0.2); /* Background color for articles */
+            border-radius: 10px; /* Optional: Rounded corners */
+            padding: 15px; /* Padding inside each article box */
+            margin-bottom: 15px; /* Space between articles */
+        }
+
+        .article-title {
+            font-size: 20px; /* Title size for each article */
+            font-weight: bold;
+        }
+
+        .article-description {
+            font-size: 16px; /* Description size for each article */
+            margin-top: 5px; /* Space above description */
+        }
+
+        /* Peek container styles */
+        .peek-container {
+            position: fixed; /* Change to fixed positioning */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            z-index: 2; /* Ensure it appears above other elements */
+            text-align: left; /* Align text to the left */
+        }
+
+        .peek-icon {
+            width: 50px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer */
+        }
+
+        .peek-title {
+            display: block;
+            margin-top: 5px;
+            color: white; /* Change color as needed */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.2em; /* Adjust font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="news-title">Latest News</h1>
+        </header>
+        
+        <div class="news-container">
+            <p class="news-text">Stay updated with the latest news and astrology in our timeline. We bring you the most important stories and events that shape our lives.</p>
+
+            <h2 class="articles-title">Recent Articles</h2>
+            <div class="articles-list">
+                <div class="article-item">
+                    <a href="https://www.allure.com/story/pluto-in-aquarius-meaning-astrological-horoscope-2023-2024" class="article-title">Why Pluto's Move Into Aquarius Is the Biggest Astrological Transit of the Year</a>
+                    <p class="Why Pluto's Move Into Aquarius Is the Biggest Astrological Transit of the Year">
+                        Everything you need to know about this major planetary shift, explained by astrologer Emily Newhouse.
+                    </p>
+                </div>
+                <div class="article-item">
+                    <a href="https://people.com/venus-in-aquarius-is-here-to-break-all-the-rules-8753292" class="article-title">Venus in Aquarius Is Bringing Radical Shifts in Love and Relationships</a>
+                    <p class="article-description">
+                        Upon Venus' debut in freedom-loving Aquarius on Dec. 7, our relationships and values break free from societal expectations
+                    </p>
+                </div>
+                <div class="article-item">
+                    <a href="https://www.almanac.com/content/mercury-retrograde-dates" class="article-title">Mercury Retrograde Dates for 2024 and 2025</a>
+                    <p class="article-description">
+                        What Is Mercury Retrograde and What Does It Mean for You?
+                    </p>
+                </div>
+            </div>
+            
+                <!-- Add more articles as needed -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Add the Vector icon for home navigation -->
+    <div class="peek-container">
+        <a href="../index.html/index.html"> <!-- Change to your home page link -->
+            <img src="../icons/Vector.png" alt="Home Icon" class="peek-icon">
+        </a>
+        <a href="/Users/kristinefeng/Desktop/Peek Site/index.html/index.html" class="peek-title"></a>
+    </div>
+    
+    <script>
+        // Add any JavaScript functionalities if needed
+    </script>
+    <script src="../script.js"></script>
+</body>
+</html>
