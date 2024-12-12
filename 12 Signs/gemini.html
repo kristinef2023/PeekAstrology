@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini - Zodiac Sign</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            background-color: rgba(0.1, 32, 230, 0.81);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            overflow-x: hidden;
+        }
+        
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5rem;
+        }
+        
+        .background-image {
+            width: 100%;
+            height: 100vh;
+            background-image: url("../images/Gemini Main.png");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link {
+            position: absolute;
+            top: 37%;
+            left: 27%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0);
+            font-size: 2rem;
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .link.mutable {
+            top: 46%;
+            left: 30%;
+        }
+
+        .link.mercury {
+            top: 55%;
+            left: 25%;
+        }
+
+        .link.sagittarius {
+            top: 64%;
+            left: 31%;
+        }
+
+        .full-width-background {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .placements-container {
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .planet-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin: 20px 10px;
+            padding: 20px;
+            text-align: left;
+            width: calc(33.33% - 40px);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .planet-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .planet-section {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .background-image {
+                height: 60vh;
+            }
+            .planet-section {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .peek-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 3;
+        }
+
+       .gallery {
+    display: none; /* Initially hide the gallery */
+    position: absolute;
+    top: 0;
+    left: 100%;
+    margin-top: 10px;
+    z-index: 1;
+    flex-wrap: wrap; /* Ensure images wrap within the gallery */
+    flex-direction: row; /* Arrange images in rows */
+}
+
+.planet-section:hover .gallery {
+    display: flex; /* Show the gallery on hover */
+}
+
+.gallery-image {
+    width: 100px; /* Set a fixed width for images */
+    height: 80px;
+    margin-left: 10px; /* Space between images */
+    transition: transform 0.3s; /* Smooth scale effect on hover */
+}
+
+.gallery-image:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <a href="../elements.html" class="link" aria-label="Go to elements page">Air</a>
+        <a href="../modalities.html" class="link mutable" aria-label="Go to mutable modalities page">Mutable</a>
+        <a href="../rulingplanets.html" class="link mercury" aria-label="Go to Mercury page">Mercury</a>
+        <a href="sagittarius.html" class="link sagittarius" aria-label="Go to Sagittarius page">Sagittarius</a>
+    </div>   
+
+    <div class="peek-container">
+        <a href="../index.html/home.html">
+            <img src="../icons/Vector.png" alt="Home Icon" class="peek-icon">
+        </a>
+    </div>
+    
+    <div class="full-width-background">
+        <div class="placements-container">
+            <h2>Gemini Placements</h2>
+            <p>*Hover to see who has these Gemini Placements*</p>
+
+            <!-- Repeat for each placement -->
+            <div class="planet-section" data-gallery-id="gemini-sun-gallery">
+                <h3>Sun in Gemini</h3>
+                <p>People with Sun in Gemini are known for their adaptability, intellect, and sociability. They are curious and love to learn.</p>
+                <img src="../peeps/GemSun.png" alt="An illustration representing the Sun in Gemini" class="planet-image" data-gallery-id="gemini-sun-gallery">
+                <div class="gallery-container">
+                    <div class="gallery" id="gemini-sun-gallery">
+                        <img src="../peeps/Riley.jpg" alt="Riley" class="gallery-image">
+                        <!-- Add more images as needed -->
+                    </div>
+                </div>
+            </div>
+            
+
+            <div class="planet-section" data-gallery-id="gemini-moon-gallery">
+                <h3>Moon in Gemini</h3>
+                <p>The Moon in Gemini signifies a curious and changeable emotional nature. Individuals often seek variety in their feelings and experiences.</p>
+                <img src="../peeps/GemMoon.png" alt="An illustration representing the Moon in Gemini" class="planet-image" data-gallery-id="gemini-moon-gallery">
+                <div class="gallery" id="gemini-moon-gallery">
+                    <img src="../peeps/Riley.jpg" alt="Riley" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="gemini-mercury-gallery">
+                <h3>Mercury in Gemini</h3>
+                <p>Mercury in Gemini reflects quick thinking and a love for communication. These individuals are often witty and articulate.</p>
+                <img src="../peeps/GemMerc.png" alt="An illustration representing Mercury in Gemini" class="planet-image" data-gallery-id="gemini-mercury-gallery">
+                <div class="gallery" id="gemini-mercury-gallery">
+                    <img src="../peeps/Riley.jpg" alt="Riley" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="gemini-venus-gallery">
+                <h3>Venus in Gemini</h3>
+                <p>Individuals with Venus in Gemini are charming and flirtatious, enjoying intellectual connections in relationships.</p>
+                <img src="../peeps/GemVenus.png" alt="An illustration representing Venus in Gemini" class="planet-image" data-gallery-id="gemini-venus-gallery">
+                <div class="gallery" id="gemini-venus-gallery">
+                    <img src="../peeps/GeminiVenus1.png" alt="Gemini Venus 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="gemini-mars-gallery">
+                <h3>Mars in Gemini</h3>
+                <p>Mars in Gemini represents a quick and versatile approach to action. These individuals are driven by their ideas and interests.</p>
+                <img src="../peeps/GemMars.png" alt="An illustration representing Mars in Gemini" class="planet-image" data-gallery-id="gemini-mars-gallery">
+                <div class="gallery" id="gemini-mars-gallery">
+                    <img src="../peeps/GeminiMars1.png" alt="Gemini Mars 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="gemini-jupiter-gallery">
+                <h3>Jupiter in Gemini</h3>
+                <p>Jupiter in Gemini encourages exploration of ideas and expansion of knowledge. These individuals are curious and open-minded.</p>
+                <img src="../peeps/GemJupiter.png" alt="An illustration representing Jupiter in Gemini" class="planet-image" data-gallery-id="gemini-jupiter-gallery">
+                <div class="gallery" id="gemini-jupiter-gallery">
+                    <img src="../peeps" alt="image" class="gallery-image">  
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+             <!-- Saturn in Gemini -->
+        <div class="planet-section" data-gallery-id="gemini-saturn-gallery">
+            <h3>Saturn in Gemini</h3>
+            <p>Individuals with Saturn in Gemini often take a serious approach to communication and learning, valuing structure in ideas.</p>
+            <img src="../peeps/GemSaturn.png" alt="An illustration representing Saturn in Gemini" class="planet-image" data-gallery-id="gemini-uranus-gallery">
+            <div class="gallery" id="gemini-saturn-gallery">
+                <img src="../peeps/Quinn2.jpeg" alt="Quinn" class="gallery-image">
+                <img src="../peeps/Sophia.jpg" alt="Sophia" class="gallery-image">
+                <img src="../peeps/Ainsley.jpg" alt="Ainsley" class="gallery-image"> 
+            </div>
+        </div>
+            
+        <!-- Uranus in Gemini -->
+        <div class="planet-section" data-gallery-id="gemini-uranus-gallery">
+            <h3>Uranus in Gemini</h3>
+            <p>Uranus in Gemini brings originality and innovation in thoughts. These individuals are often progressive thinkers.</p>
+            <img src="../peeps/GemUranus.png" alt="An illustration representing Uranus in Gemini" class="planet-image" data-gallery-id="gemini-uranus-gallery">
+            <div class="gallery" id="gemini-uranus-gallery">
+                <img src="../peeps/GeminiUranus1.png" alt="Gemini Uranus 1" class="gallery-image">
+            </div>
+        </div>
+
+        <!-- Neptune in Gemini -->
+        <div class="planet-section" data-gallery-id="gemini-neptune-gallery">
+            <h3>Neptune in Gemini</h3>
+            <p>Individuals with Neptune in Gemini have an imaginative and dreamy approach to communication and ideas.</p>
+            <img src="../peeps/GemNept.png" alt="An illustration representing Neptune in Gemini" class="planet-image" data-gallery-id="gemini-neptune-gallery">
+            <div class="gallery" id="gemini-neptune-gallery">
+                <img src="../peeps/GeminiNeptune1.png" alt="Gemini Neptune 1" class="gallery-image">
+            </div>
+        </div>
+
+        <!-- Pluto in Gemini -->
+        <div class="planet-section" data-gallery-id="gemini-pluto-gallery">
+            <h3>Pluto in Gemini</h3>
+            <p>Pluto in Gemini signifies transformation through communication and learning. These individuals may deeply influence others.</p>
+            <img src="../peeps/GemPluto.png" alt="An illustration representing Pluto in Gemini" class="planet-image" data-gallery-id="gemini-pluto-gallery">
+            <div class="gallery" id="gemini-pluto-gallery">
+                <img src="../peeps/GeminiPluto1.png" alt="Gemini Pluto 1" class="gallery-image">
+            </div>
+        </div>
+
+        <!-- Rising in Gemini -->
+        <div class="planet-section" data-gallery-id="gemini-rising-gallery">
+            <h3>Rising in Gemini</h3>
+            <p>Those with Gemini Rising often appear sociable and curious. They have a lively approach to life and communicate easily.</p>
+            <img src="../peeps/GemRising.png" alt="An illustration representing Rising in Gemini" class="planet-image" data-gallery-id="gemini-rising-gallery">
+            <div class="gallery" id="gemini-rising-gallery">
+                <img src="../peeps/GeminiRising1.png" alt="Gemini Rising 1" class="gallery-image">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const planetSections = document.querySelectorAll('.planet-section');
+
+    planetSections.forEach(section => {
+        const planetImage = section.querySelector('.planet-image');
+        const gallery = section.querySelector('.gallery');
+
+        planetImage.addEventListener('mouseenter', () => {
+            gallery.style.display = 'flex';
+            gallery.style.flexWrap = 'wrap';
+        });
+
+        planetImage.addEventListener('mouseleave', () => {
+            gallery.style.display = 'none';
+        });
+    });
+</script>
+
+</body>
+</html>
