@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarius - Zodiac Sign</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align to the left */
+            margin: 0;
+            background-color: rgba(0.1, 32, 230, 0.81);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: left; /* Align text to the left */
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5rem; /* Adjust font size for better visibility */
+        }
+        .background-image {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            background-image: url("../images/Aquarius Main.png"); /* Update image for Aquarius */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the image */
+            position: relative; /* For layering */
+            overflow: hidden; /* Prevent overflow */
+        }
+        .link {
+            position: absolute; /* Positioning for the link */
+            top: 35%; /* Adjust as needed */
+            left: 27%; /* Adjust as needed */
+            transform: translate(-50%, -50%); /* Centering */
+            color: rgba(0, 0, 0, 0); /* Link color */
+            font-size: 2rem; /* Font size for visibility */
+            text-decoration: none; /* Remove underline */
+            z-index: 2; /* Above the background */
+        }
+        .link.fixed {
+            top: 46%; /* Position for "fixed" */
+            left: 30%; /* Position for "fixed" */
+        }
+        .link.saturn {
+            top: 55%; /* Position for "saturn" */
+            left: 25%; /* Position for "saturn" */
+        }
+        .link.uranus {
+            top: 55%; /* Position for "saturn" */
+            left: 36%; /* Position for "saturn" */
+        }
+        .link.leo {
+            top: 64%; /* Position for "leo" */
+            left: 31%; /* Position for "leo" */}
+
+        .full-width-background {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .placements-container {
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .planet-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin: 20px 10px;
+            padding: 20px;
+            text-align: left;
+            width: calc(33.33% - 40px);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .planet-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .planet-section {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .background-image {
+                height: 60vh; /* Reduce height for smaller screens */
+            }
+            .planet-section {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .peek-container {
+            position: absolute; /* Change to absolute positioning */
+            top: 10px; /* Adjust distance from the top */
+            left: 10px; /* Adjust distance from the left */
+            z-index: 3; /* Ensure it's above other elements */
+        }
+
+        .gallery {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: 10px;
+            z-index: 1;
+        }
+
+        .gallery-image {
+            width: 100px;
+            height: auto;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <a href="../elements.html" class="link">Air</a>
+        <a href="../modalities.html" class="link fixed" aria-label="Go to fixed modalities page">Fixed</a>
+        <a href="../rulingplanets.html" class="link saturn" aria-label="Go to Saturn page">Saturn</a>
+        <a href="../rulingplanets.html" class="link uranus" aria-label="Go to Uranus page">Uranus</a>
+        <a href="leo.html" class="link leo" aria-label="Go to Leo page">Leo</a>
+    </div>   
+
+    <div class="peek-container">
+        <a href="../index.html/index.html">
+            <img src="../icons/Vector.png" alt="Home Icon" class="peek-icon">
+        </a>
+    </div>
+
+    <div class="full-width-background">
+        <div class="placements-container">
+            <h2>Aquarius Placements</h2>
+            <p>*Hover to see who has these Aquarius Placements*</p>
+
+            <!-- Sun in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-sun-gallery">
+                <h3>Sun in Aquarius</h3>
+                <p>Individuals with Sun in Aquarius are known for their independence and innovation.</p>
+                <img src="../peeps/Aqua sun.png" alt="An illustration representing the Sun in Aquarius" class="planet-image" data-gallery-id="aquarius-sun-gallery">
+                <div class="gallery" id="aquarius-sun-gallery">
+                    <img src="../peeps/AquariusSun1.png" alt="Aquarius Sun 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Moon in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-moon-gallery">
+                <h3>Moon in Aquarius</h3>
+                <p>The Moon in Aquarius signifies a unique and inventive emotional nature.</p>
+                <img src="../peeps/AquaMoon.png" alt="An illustration representing the Moon in Aquarius" class="planet-image" data-gallery-id="aquarius-moon-gallery">
+                <div class="gallery" id="aquarius-moon-gallery">
+                    <img src="../peeps/Quinn2.jpeg" alt="Aquarius Moon 1" class="gallery-image">
+                    <img src="../peeps/Natalie2.jpg" alt="Aquarius Moon 2" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Mercury in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-mercury-gallery">
+                <h3>Mercury in Aquarius</h3>
+                <p>Mercury in Aquarius enhances original thinking and progressive ideas.</p>
+                <img src="../peeps/AquaMercury.png" alt="An illustration representing Mercury in Aquarius" class="planet-image" data-gallery-id="aquarius-mercury-gallery">
+                <div class="gallery" id="aquarius-mercury-gallery">
+                    <img src="../peeps/AquariusMercury1.png" alt="Aquarius Mercury 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Venus in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-venus-gallery">
+                <h3>Venus in Aquarius</h3>
+                <p>Individuals with Venus in Aquarius value freedom and unconventional relationships.</p>
+                <img src="../peeps/AquaVenus.png" alt="An illustration representing Venus in Aquarius" class="planet-image" data-gallery-id="aquarius-venus-gallery">
+                <div class="gallery" id="aquarius-venus-gallery">
+                    <img src="../peeps/AquariusVenus1.png" alt="Aquarius Venus 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Mars in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-mars-gallery">
+                <h3>Mars in Aquarius</h3>
+                <p>Mars in Aquarius indicates a strong drive for innovation and social change.</p>
+                <img src="../peeps/AquaMars.png" alt="An illustration representing Mars in Aquarius" class="planet-image" data-gallery-id="aquarius-mars-gallery">
+                <div class="gallery" id="aquarius-mars-gallery">
+                    <img src="../peeps/Quinn2.jpeg" alt="Aquarius Mars 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Jupiter in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-jupiter-gallery">
+                <h3>Jupiter in Aquarius</h3>
+                <p>Jupiter in Aquarius promotes humanitarian efforts and forward-thinking ideas.</p>
+                <img src="../peeps/AquaJupiter.png" alt="An illustration representing Jupiter in Aquarius" class="planet-image" data-gallery-id="aquarius-jupiter-gallery">
+                <div class="gallery" id="aquarius-jupiter-gallery">
+                    <img src="../peeps/Yaren.jpeg" alt="Aquarius Jupiter 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Saturn in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-saturn-gallery">
+                <h3>Saturn in Aquarius</h3>
+                <p>Saturn in Aquarius encourages responsibility towards community and innovation.</p>
+                <img src="../peeps/AquaSaturn.png" alt="An illustration representing Saturn in Aquarius" class="planet-image" data-gallery-id="aquarius-saturn-gallery">
+                <div class="gallery" id="aquarius-saturn-gallery">
+                    <img src="../peeps/AquariusSaturn1.png" alt="Aquarius Saturn 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Uranus in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-uranus-gallery">
+                <h3>Uranus in Aquarius</h3>
+                <p>Uranus is the ruling planet of Aquarius, representing originality and rebellion.</p>
+                <img src="../peeps/AquaUranus.png" alt="An illustration representing Uranus in Aquarius" class="planet-image" data-gallery-id="aquarius-uranus-gallery">
+                <div class="gallery" id="aquarius-uranus-gallery">
+                    <img src="../peeps/Ainsley.jpg" alt="Aquarius Uranus 1" class="gallery-image">
+                    <img src="../peeps/Sophia.jpg" alt="Aquarius Uranus 2" class="gallery-image">
+                    <img src="../peeps/Lauryn.jpeg" alt="Aquarius Uranus 3" class="gallery-image">
+                    <img src="../peeps/Kate.jpeg" alt="Aquarius Uranus 4" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Neptune in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-neptune-gallery">
+                <h3>Neptune in Aquarius</h3>
+                <p>Neptune in Aquarius fosters a sense of idealism and vision for the future.</p>
+                <img src="../peeps/AquaNept.png" alt="An illustration representing Neptune in Aquarius" class="planet-image" data-gallery-id="aquarius-neptune-gallery">
+                <div class="gallery" id="aquarius-neptune-gallery">
+                    <img src="../peeps/Ainsley.jpg" alt="Aquarius Neptune 1" class="gallery-image">
+                    <img src="../peeps/Sophia.jpg" alt="Aquarius Neptune 2" class="gallery-image">
+                    <img src="../peeps/Ife.png" alt="Aquarius Neptune 3" class="gallery-image">
+                    <img src="../peeps/Lauryn.jpeg" alt="Aquarius Neptune 4" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Pluto in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-pluto-gallery">
+                <h3>Pluto in Aquarius</h3>
+                <p>Pluto in Aquarius signifies transformative changes in society and technology.</p>
+                <img src="../peeps/AquaPluto.png" alt="An illustration representing Pluto in Aquarius" class="planet-image" data-gallery-id="aquarius-pluto-gallery">
+                <div class="gallery" id="aquarius-pluto-gallery">
+                    <img src="../peeps/AquariusPluto1.png" alt="Aquarius Pluto 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Rising in Aquarius -->
+            <div class="planet-section" data-gallery-id="aquarius-rising-gallery">
+                <h3>Rising in Aquarius</h3>
+                <p>Those with Aquarius rising are often seen as unique and innovative by others.</p>
+                <img src="../peeps/AquaRising.png" alt="An illustration representing Rising in Aquarius" class="planet-image" data-gallery-id="aquarius-rising-gallery">
+                <div class="gallery" id="aquarius-rising-gallery">
+                    <img src="../peeps/Yaren.jpeg" alt="Aquarius Rising 1" class="gallery-image">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        const planetSections = document.querySelectorAll('.planet-section');
+
+        planetSections.forEach(section => {
+            const planetImage = section.querySelector('.planet-image');
+            const gallery = section.querySelector('.gallery');
+
+            planetImage.addEventListener('mouseenter', () => {
+                gallery.style.display = 'flex';
+                gallery.style.flexWrap = 'wrap';
+            });
+
+            planetImage.addEventListener('mouseleave', () => {
+                gallery.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>

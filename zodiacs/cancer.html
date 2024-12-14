@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancer - Zodiac Sign</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin: 0;
+            background-color: rgba(0.1, 32, 230, 0.81);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: left;
+            overflow-x: hidden;
+        }
+        
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5rem;
+        }
+        
+        .background-image {
+            width: 100%;
+            height: 100vh;
+            background-image: url("../images/Cancer Main.png");
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .link {
+            position: absolute;
+            top: 37%;
+            left: 27%;
+            transform: translate(-50%, -50%);
+            color: rgba(0, 0, 0, 0);
+            font-size: 2rem;
+            text-decoration: none;
+            z-index: 2;
+        }
+
+        .link.cardinal {
+            top: 46%;
+            left: 30%;
+        }
+
+        .link.moon {
+            top: 55%;
+            left: 25%;
+        }
+
+        .link.capricorn {
+            top: 64%;
+            left: 31%;
+        }
+
+        .full-width-background {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .placements-container {
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .planet-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin: 20px 10px;
+            padding: 20px;
+            text-align: left;
+            width: calc(33.33% - 40px);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .planet-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .planet-section {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .background-image {
+                height: 60vh;
+            }
+            .planet-section {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .peek-container {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 3;
+        }
+
+        .gallery {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: 10px;
+            z-index: 1;
+        }
+
+        .gallery-image {
+            width: 100px;
+            height: auto;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <a href="../elements.html" class="link" aria-label="Go to elements page">Water</a>
+        <a href="modalities.html" class="link cardinal" aria-label="Go to cardinal modalities page">Cardinal</a>
+        <a href="../rulingplanets.html" class="link moon" aria-label="Go to Moon page">Moon</a>
+        <a href="capricorn.html" class="link capricorn" aria-label="Go to Capricorn page">Capricorn</a>
+    </div>   
+
+    <div class="peek-container">
+        <a href="../index.html/index.html">
+            <img src="../icons/Vector.png" alt="Home Icon" class="peek-icon">
+        </a>
+    </div>
+    
+    <div class="full-width-background">
+        <div class="placements-container">
+            <h2>Cancer Placements</h2>
+            <p>*Hover to see who has these Cancer Placements*</p>
+
+            <div class="planet-section" data-gallery-id="cancer-sun-gallery">
+                <h3>Sun in Cancer</h3>
+                <p>People with Sun in Cancer are known for their emotional depth and nurturing qualities. They value home and family.</p>
+                <img src="../peeps/CancerSun.png" alt="An illustration representing the Sun in Cancer" class="planet-image" data-gallery-id="cancer-sun-gallery">
+                <div class="gallery" id="cancer-sun-gallery">
+                    <img src="../peeps/CancerSun1.png" alt="Cancer Sun 1" class="gallery-image">
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-moon-gallery">
+                <h3>Moon in Cancer</h3>
+                <p>The Moon in Cancer signifies a strong connection to emotions and intuition. Individuals often seek comfort in familiarity.</p>
+                <img src="../peeps/CancerMoon.png" alt="An illustration representing the Moon in Cancer" class="planet-image" data-gallery-id="cancer-moon-gallery">
+                <div class="gallery" id="cancer-moon-gallery">
+                    <img src="../peeps/CancerMoon1.png" alt="Cancer Moon 1" class="gallery-image">
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-mercury-gallery">
+                <h3>Mercury in Cancer</h3>
+                <p>Mercury in Cancer reflects a thoughtful and sensitive communication style. These individuals often express their feelings deeply.</p>
+                <img src="../peeps/CancerMercury.png" alt="An illustration representing Mercury in Cancer" class="planet-image" data-gallery-id="cancer-mercury-gallery">
+                <div class="gallery" id="cancer-mercury-gallery">
+                    <img src="../peeps/CancerMercury1.png" alt="Cancer Mercury 1" class="gallery-image">
+                </div>
+            </div>
+            <div class="planet-section" data-gallery-id="cancer-venus-gallery">
+                <h3>Venus in Cancer</h3>
+                <p>Individuals with Venus in Cancer are loving and protective in relationships, valuing emotional security.</p>
+                <img src="../peeps/CancerVenus.png" alt="An illustration representing Venus in Cancer" class="planet-image" data-gallery-id="cancer-venus-gallery">
+                <div class="gallery" id="cancer-venus-gallery">
+                    <img src="../peeps/CancerVenus1.png" alt="Cancer Venus 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-mars-gallery">
+                <h3>Mars in Cancer</h3>
+                <p>Mars in Cancer indicates a protective and nurturing approach to action. These individuals are motivated by their loved ones.</p>
+                <img src="../peeps/CancerMars.png" alt="An illustration representing Mars in Cancer" class="planet-image" data-gallery-id="cancer-mars-gallery">
+                <div class="gallery" id="cancer-mars-gallery">
+                    <img src="../peeps/CancerMars1.png" alt="Cancer Mars 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-jupiter-gallery">
+                <h3>Jupiter in Cancer</h3>
+                <p>Jupiter in Cancer encourages growth through family and home experiences. These individuals are generous and protective.</p>
+                <img src="../peeps/CancerJupiter.png" alt="An illustration representing Jupiter in Cancer" class="planet-image" data-gallery-id="cancer-jupiter-gallery">
+                <div class="gallery" id="cancer-jupiter-gallery">
+                    <img src="../peeps/CancerJupiter1.png" alt="Cancer Jupiter 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-saturn-gallery">
+                <h3>Saturn in Cancer</h3>
+                <p>Individuals with Saturn in Cancer often seek to create a solid foundation for their emotional world and family life.</p>
+                <img src="../peeps/CancerSaturn.png" alt="An illustration representing Saturn in Cancer" class="planet-image" data-gallery-id="cancer-saturn-gallery">
+                <div class="gallery" id="cancer-saturn-gallery">
+                    <img src="../peeps/CancerSaturn1.png" alt="Cancer Saturn 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-uranus-gallery">
+                <h3>Uranus in Cancer</h3>
+                <p>Uranus in Cancer brings innovative ideas related to home and family. These individuals may approach traditions differently.</p>
+                <img src="../peeps/CancerUranus.png" alt="An illustration representing Uranus in Cancer" class="planet-image" data-gallery-id="cancer-uranus-gallery">
+                <div class="gallery" id="cancer-uranus-gallery">
+                    <img src="../peeps/CancerUranus1.png" alt="Cancer Uranus 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-neptune-gallery">
+                <h3>Neptune in Cancer</h3>
+                <p>Individuals with Neptune in Cancer have a dreamy and imaginative approach to family and emotional connections.</p>
+                <img src="../peeps/CancerNept.png" alt="An illustration representing Neptune in Cancer" class="planet-image" data-gallery-id="cancer-neptune-gallery">
+                <div class="gallery" id="cancer-neptune-gallery">
+                    <img src="../peeps/CancerNeptune1.png" alt="Cancer Neptune 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-pluto-gallery">
+                <h3>Pluto in Cancer</h3>
+                <p>Pluto in Cancer signifies deep emotional transformation and the importance of nurturing connections in life.</p>
+                <img src="../peeps/CancerPluto.png" alt="An illustration representing Pluto in Cancer" class="planet-image" data-gallery-id="cancer-pluto-gallery">
+                <div class="gallery" id="cancer-pluto-gallery">
+                    <img src="../peeps/CancerPluto1.png" alt="Cancer Pluto 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+
+            <div class="planet-section" data-gallery-id="cancer-rising-gallery">
+                <h3>Rising in Cancer</h3>
+                <p>Those with Cancer Rising often appear nurturing and intuitive. They have a deep connection to home and family.</p>
+                <img src="../peeps/CancerRising.png" alt="An illustration representing Rising in Cancer" class="planet-image" data-gallery-id="cancer-rising-gallery">
+                <div class="gallery" id="cancer-rising-gallery">
+                    <img src="../peeps/CancerRising1.png" alt="Cancer Rising 1" class="gallery-image">
+                    <!-- Add more images as needed -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const planetSections = document.querySelectorAll('.planet-section');
+
+        planetSections.forEach(section => {
+            const planetImage = section.querySelector('.planet-image');
+            const gallery = section.querySelector('.gallery');
+
+            planetImage.addEventListener('mouseenter', () => {
+                gallery.style.display = 'flex';
+                gallery.style.flexWrap = 'wrap';
+            });
+
+            planetImage.addEventListener('mouseleave', () => {
+                gallery.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>

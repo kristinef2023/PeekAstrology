@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagittarius - Zodiac Sign</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start; /* Align to the left */
+            margin: 0;
+            background-color: rgba(0.1, 32, 230, 0.81);
+            color: #fff;
+            font-family: Arial, sans-serif;
+            text-align: left; /* Align text to the left */
+            overflow-x: hidden; /* Hide horizontal overflow */
+        }
+
+        h1 {
+            margin: 20px 0;
+            font-size: 2.5rem; /* Adjust font size for better visibility */
+        }
+
+        .background-image {
+            width: 100%;
+            height: 100vh; /* Full viewport height */
+            background-image: url("../images/Sagittarius Main.png"); /* Update image for Sagittarius */
+            background-size: cover; /* Cover the entire area */
+            background-position: center; /* Center the image */
+            position: relative; /* For layering */
+            overflow: hidden; /* Prevent overflow */
+        }
+
+        .link {
+            position: absolute; /* Positioning for the link */
+            top: 37%; /* Adjust as needed */
+            left: 27%; /* Adjust as needed */
+            transform: translate(-50%, -50%); /* Centering */
+            color: rgba(0, 0, 0, 0); /* Link color */
+            font-size: 2rem; /* Font size for visibility */
+            text-decoration: none; /* Remove underline */
+            z-index: 2; /* Above the background */
+        }
+
+        .link.mutable {
+            top: 46%; /* Position for "mutable" */
+            left: 30%; /* Position for "mutable" */
+        }
+
+        .link.jupiter {
+            top: 55%; /* Position for "jupiter" */
+            left: 25%; /* Position for "jupiter" */
+        }
+
+        .link.gemini {
+            top: 64%; /* Position for "gemini" */
+            left: 31%; /* Position for "gemini" */
+        }
+
+        .full-width-background {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 40px 20px;
+            width: 100vw;
+            position: relative;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+        }
+
+        .placements-container {
+            border-radius: 8px;
+            margin: 20px auto;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        h2 {
+            margin: 0;
+            padding-left: 20px;
+            font-size: 2rem;
+            color: white;
+        }
+
+        .planet-section {
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            margin: 20px 10px;
+            padding: 20px;
+            text-align: left;
+            width: calc(33.33% - 40px);
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .planet-image {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin: 10px 0;
+        }
+
+        @media (max-width: 1024px) {
+            .planet-section {
+                width: calc(50% - 40px);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .background-image {
+                height: 60vh; /* Reduce height for smaller screens */
+            }
+            .planet-section {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+
+        .peek-container {
+            position: absolute; /* Change to absolute positioning */
+            top: 10px; /* Adjust distance from the top */
+            left: 10px; /* Adjust distance from the left */
+            z-index: 3; /* Ensure it's above other elements */
+        }
+
+        .gallery {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 100%;
+            margin-top: 10px;
+            z-index: 1;
+        }
+
+        .gallery-image {
+            width: 100px;
+            height: auto;
+            margin-left: 10px;
+            transition: transform 0.3s;
+        }
+
+        .gallery-image:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background-image">
+        <a href="../elements.html" class="link" aria-label="Go to elements page">Fire</a>
+        <a href="../modalities.html" class="link mutable" aria-label="Go to mutable modalities page">Mutable</a>
+        <a href="../rulingplanets.html" class="link jupiter" aria-label="Go to Jupiter page">Jupiter</a>
+        <a href="gemini.html" class="link gemini" aria-label="Go to Gemini page">Gemini</a>
+    </div>
+
+    <div class="peek-container">
+        <a href="../index.html/index.html">
+            <img src="../icons/Vector.png" alt="Home Icon" class="peek-icon">
+        </a>
+    </div>
+
+    <div class="full-width-background">
+        <div class="placements-container">
+            <h2>Sagittarius Placements</h2>
+            <p>*Hover to see who has these Sagittarius Placements*</p>
+
+            <!-- Sun in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-sun-gallery">
+                <h3>Sun in Sagittarius</h3>
+                <p>People with Sun in Sagittarius are known for their adventurous spirit and optimism.</p>
+                <img src="../peeps/Sag sun.png" alt="An illustration representing the Sun in Sagittarius" class="planet-image" data-gallery-id="sag-sun-gallery">
+                <div class="gallery" id="sag-sun-gallery">
+                    <img src="../peeps/SagSun1.png" alt="Sagittarius Sun 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Moon in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-moon-gallery">
+                <h3>Moon in Sagittarius</h3>
+                <p>The Moon in Sagittarius signifies a free-spirited and optimistic emotional nature.</p>
+                <img src="../peeps/SagMoon.png" alt="An illustration representing the Moon in Sagittarius" class="planet-image" data-gallery-id="sag-moon-gallery">
+                <div class="gallery" id="sag-moon-gallery">
+                    <img src="../peeps/SagMoon1.png" alt="Sagittarius Moon 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Mercury in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-mercury-gallery">
+                <h3>Mercury in Sagittarius</h3>
+                <p>Mercury in Sagittarius enhances communication with a philosophical and broad-minded approach.</p>
+                <img src="../peeps/SagMercury.png" alt="An illustration representing Mercury in Sagittarius" class="planet-image" data-gallery-id="sag-mercury-gallery">
+                <div class="gallery" id="sag-mercury-gallery">
+                    <img src="../peeps/SagMercury1.png" alt="Sagittarius Mercury 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Venus in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-venus-gallery">
+                <h3>Venus in Sagittarius</h3>
+                <p>Individuals with Venus in Sagittarius value freedom and adventure in relationships.</p>
+                <img src="../peeps/SagVenus.png" alt="An illustration representing Venus in Sagittarius" class="planet-image" data-gallery-id="sag-venus-gallery">
+                <div class="gallery" id="sag-venus-gallery">
+                    <img src="../peeps/SagVenus1.png" alt="Sagittarius Venus 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Mars in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-mars-gallery">
+                <h3>Mars in Sagittarius</h3>
+                <p>Mars in Sagittarius signifies a bold and adventurous approach to challenges.</p>
+                <img src="../peeps/SagMars.png" alt="An illustration representing Mars in Sagittarius" class="planet-image" data-gallery-id="sag-mars-gallery">
+                <div class="gallery" id="sag-mars-gallery">
+                    <img src="../peeps/SagMars1.png" alt="Sagittarius Mars 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Jupiter in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-jupiter-gallery">
+                <h3>Jupiter in Sagittarius</h3>
+                <p>Jupiter in Sagittarius brings luck, expansion, and a love for travel.</p>
+                <img src="../peeps/SagJupiter.png" alt="An illustration representing Jupiter in Sagittarius" class="planet-image" data-gallery-id="sag-jupiter-gallery">
+                <div class="gallery" id="sag-jupiter-gallery">
+                    <img src="../peeps/SagJupiter1.png" alt="Sagittarius Jupiter 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Saturn in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-saturn-gallery">
+                <h3>Saturn in Sagittarius</h3>
+                <p>Saturn in Sagittarius encourages a disciplined approach to philosophical and ethical matters.</p>
+                <img src="../peeps/SagSaturn.png" alt="An illustration representing Saturn in Sagittarius" class="planet-image" data-gallery-id="sag-saturn-gallery">
+                <div class="gallery" id="sag-saturn-gallery">
+                    <img src="../peeps/SagSaturn1.png" alt="Sagittarius Saturn 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Uranus in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-uranus-gallery">
+                <h3>Uranus in Sagittarius</h3>
+                <p>Uranus in Sagittarius brings innovative and unconventional ideas about freedom and exploration.</p>
+                <img src="../peeps/SagUranus.png" alt="An illustration representing Uranus in Sagittarius" class="planet-image" data-gallery-id="sag-uranus-gallery">
+                <div class="gallery" id="sag-uranus-gallery">
+                    <img src="../peeps/SagUranus1.png" alt="Sagittarius Uranus 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Neptune in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-neptune-gallery">
+                <h3>Neptune in Sagittarius</h3>
+                <p>Neptune in Sagittarius fosters idealism and a quest for deeper truths.</p>
+                <img src="../peeps/SagNept.png" alt="An illustration representing Neptune in Sagittarius" class="planet-image" data-gallery-id="sag-neptune-gallery">
+                <div class="gallery" id="sag-neptune-gallery">
+                    <img src="../peeps/SagNeptune1.png" alt="Sagittarius Neptune 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Pluto in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-pluto-gallery">
+                <h3>Pluto in Sagittarius</h3>
+                <p>Pluto in Sagittarius signifies transformational experiences related to beliefs and philosophy.</p>
+                <img src="../peeps/SagPluto.png" alt="An illustration representing Pluto in Sagittarius" class="planet-image" data-gallery-id="sag-pluto-gallery">
+                <div class="gallery" id="sag-pluto-gallery">
+                    <img src="../peeps/SagPluto1.png" alt="Sagittarius Pluto 1" class="gallery-image">
+                </div>
+            </div>
+
+            <!-- Rising in Sagittarius -->
+            <div class="planet-section" data-gallery-id="sag-rising-gallery">
+                <h3>Rising in Sagittarius</h3>
+                <p>Having a Sagittarius rising means you approach life with enthusiasm and a sense of adventure.</p>
+                <img src="../peeps/SagRising.png" alt="An illustration representing Rising in Sagittarius" class="planet-image" data-gallery-id="sag-rising-gallery">
+                <div class="gallery" id="sag-rising-gallery">
+                    <img src="../peeps/SagRising1.png" alt="Sagittarius Rising 1" class="gallery-image">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const planetSections = document.querySelectorAll('.planet-section');
+
+        planetSections.forEach(section => {
+            const planetImage = section.querySelector('.planet-image');
+            const gallery = section.querySelector('.gallery');
+
+            planetImage.addEventListener('mouseenter', () => {
+                gallery.style.display = 'flex';
+                gallery.style.flexWrap = 'wrap';
+            });
+
+            planetImage.addEventListener('mouseleave', () => {
+                gallery.style.display = 'none';
+            });
+        });
+    </script>
+
+</body>
+</html>
