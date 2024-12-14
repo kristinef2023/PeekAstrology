@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peek Astrology</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    <style>
+        /* Reset and body styling */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%; 
+            overflow-x: hidden;
+            font-family: 'Alice', serif;
+        }
+    
+        .container {
+            width: 100%;
+            height: 100%;
+            position: relative;
+            background: rgba(1, 32, 230, 0.5); /* Adjust alpha value for opacity */
+            background-image: url('./images/bg-starts\ copy.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-blend-mode: overlay; /* Experiment with blend modes like 'multiply', 'overlay', etc. */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    
+/* Header styling */
+header {
+    width: 100%;
+    height: 80px;
+    background: rgba(14, 11, 92, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    padding: 0 20px;
+    z-index: 100;
+}
+
+/* Navigation styling */
+nav ul {
+    list-style: none;
+    padding: 10px;
+    margin: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: auto; /* Ensures the items are pushed to the right */
+}
+    
+        .nav-item {
+            color: white;
+            font-size: 18px;
+            font-weight: 400;
+            margin-left: 20px; 
+            position: relative;
+        }
+    
+        .nav-item a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+    
+        .nav-item a:hover {
+            color: #FFD700; /* Gold hover effect */
+        }
+    
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: rgba(14, 11, 92, 0.9);
+            z-index: 1;
+        }
+    
+        .dropdown a {
+            display: block;
+            padding: 10px 20px;
+            color: white;
+            text-decoration: none;
+        }
+    
+        .dropdown a:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    
+        /* Sneak section styling */
+        .sneak {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 50px;
+        }
+    
+        .sneak .sneak-text,
+        .sneak .peek-text,
+        .sneak .ellipsis {
+            font-size: 50px;
+            color:white;
+        }
+    
+        .sneak .peek-text {
+            font-weight: normal;
+            text-decoration: none;
+            font-style: italic;
+        }
+    
+        /* Menu Icon for mobile */
+        .menu-icon {
+            display: none;
+            font-size: 28px;
+            color: white;
+            cursor: pointer;
+        }
+    
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                position: fixed;
+                top: 80px;
+                left: 0;
+                width: 100%;
+                background: rgba(14, 11, 92, 0.8);
+                display: none;
+            }
+    
+            nav ul.show {
+                display: flex;
+            }
+    
+            .menu-icon {
+                display: block;
+            }
+    
+            .sneak {
+                font-size: 35px; /* Reduce size on small screens */
+            }
+        }
+    
+        @media (max-width: 480px) {
+            .nav-item {
+                font-size: 16px;
+            }
+    
+            .sneak {
+                font-size: 30px; /* Reduce text size further on very small screens */
+            }
+        }
+    
+        html {
+            scroll-behavior: smooth;
+        }
+    
+        .nav-item a {
+            transition: color 0.5s ease-in-out; /* Smoother hover effect */
+        }
+        .icon-container {
+            position: fixed; /* Fixes the icon at the top left */
+            top: 10px; /* Adjust the distance from the top */
+            left: 10px; /* Adjust the distance from the left */
+            z-index: 1000; /* Ensure it's above other content */
+            font-size: 30px; /* Adjust icon size */
+            color: white; /* Icon color */
+        }
+        
+    </style>
+    
+    <script>
+        document.querySelector('.menu-icon').addEventListener('click', function() {
+            const navMenu = document.querySelector('nav ul');
+            navMenu.classList.toggle('show');
+        });
+    </script>    
+</head>
+<body>
+    <div class="icon-container">
+        <img src="./images/Vector copy.png">
+    </div>
+    
+    <div class="container">
+        <header>
+            <div class="menu-icon" id="menu-icon">☰</div>
+            <nav role="navigation">
+                <ul id="navbar-links">
+                    <li class="nav-item home">
+                        <a href="#" id="home-link" aria-haspopup="true" aria-expanded="false">Home</a>
+                        <div class="dropdown" id="home-dropdown">
+                            <a href="./individual.html">Individual Signs</a>
+                            <a href="./elements.html">Elements</a>
+                            <a href="./modalities.html">Modalities</a>
+                            <a href="./rulingplanets.html">Ruling Planets</a>
+                        </div>
+                    </li>
+                    <li class="nav-item gallery"><a href="./gallery.html">Gallery</a></li>
+                    <li class="nav-item about"><a href="./about.html">About</a></li>
+                    <li class="nav-item news"><a href="./news.html">News</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="sneak">
+            <span class="sneak-text">Sneak a </span>
+            <a href="../individual.html" class="peek-text">Peek</a>
+            <span class="ellipsis">...</span>
+        </div>
+    </div>
+
+    <script>
+        const homeLink = document.getElementById('home-link');
+        const homeDropdown = document.getElementById('home-dropdown');
+        const navbarLinks = document.getElementById('navbar-links');
+        const menuIcon = document.getElementById('menu-icon');
+
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            const isDropdownVisible = homeDropdown.style.display === 'block';
+            homeDropdown.style.display = isDropdownVisible ? 'none' : 'block';
+            homeLink.setAttribute('aria-expanded', !isDropdownVisible);
+        });
+
+        window.addEventListener('click', (e) => {
+            if (!homeLink.contains(e.target) && !homeDropdown.contains(e.target)) {
+                homeDropdown.style.display = 'none';
+                homeLink.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Toggle navigation links on mobile
+        menuIcon.addEventListener('click', () => {
+            navbarLinks.classList.toggle('show');
+        });
+
+        // Smooth scrolling for links to individual.html
+        document.querySelectorAll('a[href^="../individual.html"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').split('#')[1];
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    window.location.href = this.getAttribute('href');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
