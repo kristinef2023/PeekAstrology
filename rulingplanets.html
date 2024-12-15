@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ruling Planets</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%; /* Ensures full height for both html and body */
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(images/bg-starts.jpg);
+            background-size: cover; /* Ensures the image covers the entire area */
+            background-position: center; /* Centers the background image */
+            position: relative; /* Positioning context for the overlay */
+        }
+
+        .overlay {
+            position: fixed; /* Fixes the overlay to the viewport */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(1, 31, 230, 0.5); /* Semi-transparent overlay */
+            z-index: 1; /* Ensures the overlay is above the background image */
+        }
+
+        .content {
+            position: relative; /* Ensures child elements are above the overlay */
+            z-index: 2; /* Higher z-index to stay above the overlay */
+            margin: 20px;
+            padding: 20px;
+            line-height: 1.6;
+            color: #c2bcbc; /* Set text color for better visibility */
+        }
+
+        h1, h2 {
+            color: #fff; /* Change header color for better visibility */
+            padding-top: 10px;
+        }
+        
+        ul {
+            margin: 0px 0;
+        }
+
+        img {
+            width: 600px; /* Set a fixed width for the image */
+            height: auto; /* Maintains aspect ratio */
+        }
+        /* Peek container styles */
+        .peek-container {
+            position: fixed; /* Change to fixed positioning */
+            top: 20px; /* Distance from the top */
+            left: 20px; /* Distance from the left */
+            z-index: 2; /* Ensure it appears above other elements */
+            text-align: left; /* Align text to the left */
+        }
+
+        .peek-icon {
+            width: 50px; /* Adjust size as needed */
+            cursor: pointer; /* Change cursor to pointer */
+            padding-bottom: 5px;
+        }
+
+        .peek-title {
+            display: block;
+            margin-top: 5px;
+            color: white; /* Change color as needed */
+            text-decoration: none; /* Remove underline */
+            font-size: 1.2em; /* Adjust font size */
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay"></div> <!-- Overlay div for color -->
+    <div class="content">
+        <h2>How to Find Your Chart Ruler</h2>
+
+        <h3>Step 1: Determine Your Ascendant Sign</h3>
+
+        <h3>Step 2: Find the Ruling Planet</h3>
+        <img src="./images/Frame 2.png" alt="Chart Ruler">
+
+        <h3>Step 3: Interpret the Ruler’s Placement</h3>
+        <p> *The placement of this ruling planet in your natal chart can provide insights into your personality and life themes.</p>
+    </div>
+        <!-- Add the Vector icon for home navigation -->
+        <div class="peek-container">
+            <a href="./index.html"> <!-- Change to your home page link -->
+                <img src="./images/Vector copy.png" alt="Home Icon" class="peek-icon">
+            </a>
+            <a href="./index.html" class="peek-title"></a>
+        </div>
+</body>
+</html>
