@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nicole's Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alice&display=swap" rel="stylesheet">
+    
+    <style>
+        html, body {
+            height: 100%; /* Full height */
+            margin: 0; /* Remove default margin */
+            overflow-x: hidden; /* Prevent horizontal scrolling */
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url(../images/bg-starts.jpg);
+            background-size: cover; /* Cover the entire background */
+            background-repeat: no-repeat;
+            background-attachment: scroll; /* Change to scroll */
+            color: #333;
+            padding: 0; /* Remove padding */
+            text-align: center;
+        }
+        
+        header {
+            background: rgba(14, 11, 92, 0.8);
+            color: white;
+            padding: 0px; /* Added padding for better spacing */
+            border-radius: 5px;
+            margin-bottom: 20px; /* Increased margin for more space below */
+        }
+        
+        .profile {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 10px 0; /* Added margin for space above and below */
+        }
+        
+        .profile img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 0px;
+        }
+        
+        .birthchart {
+            margin-top: 40px; /* Reduced margin-top for better spacing */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: aliceblue;
+            background: transparent; /* Remove the white box */
+            padding: 0; /* Remove padding */
+        }
+        
+        .birthchart-row {
+            margin: 0px 0; /* Added margin for spacing */
+            padding: 10px 0; /* Adjust padding as necessary */
+            display: flex;
+            justify-content: center;
+            width: 100%; /* Cover full width of the parent */
+            color: aliceblue;
+        }
+        
+        .birthchart-item {
+            margin: 10px;
+            text-align: center;
+        }
+        
+        .image-container {
+            position: relative; /* Positioning for overlay */
+            display: inline-block; /* Ensure the container wraps around the image */
+        }
+        
+        .image-container img {
+            width: 200px; /* Increased size */
+            height: auto; /* Maintain aspect ratio */
+            border-radius: 10px; /* Maintain border radius */
+            transition: opacity 0.3s; /* Smooth transition for image */
+        }
+        
+        /* Optional: Reset margins and paddings */
+        h1, h2, h3, p {
+            margin: 0;
+            padding: 20px; /* Added padding for spacing */
+        }
+        
+
+        .hover-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Dark overlay */
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; /* Hidden by default */
+            transition: opacity 0.3s; /* Smooth transition for overlay */
+            border-radius: 10px; /* Maintain border radius */
+            padding: 20px; /* Some padding for the text */
+        }
+
+        .image-container:hover img {
+            opacity: 0.3; /* Reduce image opacity on hover */
+        }
+
+        .image-container:hover .hover-overlay {
+            opacity: 1; /* Show overlay on hover */
+        }
+
+        .get-to-know {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: rgba(14, 11, 92, 0.8);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .back-button:hover {
+            background-color: rgba(14, 11, 92, 0.6);
+        }
+
+        @media (max-width: 768px) {
+            .birthchart img {
+                width: 100px; /* Adjusted size for smaller screens */
+            }
+
+            .birthchart-row {
+                flex-direction: column; /* Stack items vertically on small screens */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nicole's Profile</h1>
+</header>
+
+<section class="profile">
+    <img src="../peeps/Nicole.JPG" alt="Nicole smiling outdoors">
+    <h2>Hover to Learn More About Nicole!</h2>
+</section>
+
+<section class="birthchart" aria-labelledby="birthchart-title">
+    <h2 id="birthchart-title">Nicole's Birth Chart</h2>
+
+    <div class="birthchart-row">
+        <div class="birthchart-item">
+            <h3>Libra Sun</h3>
+            <div class="image-container">
+                <img src="../peeps/LibraSun.png" alt="Libra Sun symbol">
+                <div class="hover-overlay">
+                    <p>I am motivated through myself and the person I will become. I actively make sure I'm on the path to get there.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="birthchart-row">
+        <div class="birthchart-item">
+            <h3>Leo Moon</h3>
+            <div class="image-container">
+                <img src="../peeps/LeoMoon.png" alt="Leo Moon symbol">
+                <div class="hover-overlay">
+                    <p>In stressful situations, I try to stay grounded and to work on making some sense of the chaos in the best way possible.</p>
+                </div>
+            </div>
+        </div>
+        <div class="birthchart-item">
+            <h3>Leo Rising</h3>
+            <div class="image-container">
+                <img src="../peeps/LeoRising.png" alt="Leo Rising symbol">
+                <div class="hover-overlay">
+                    <p>I can come across as a little reserved and may keep to myself a bit, but tend to open up after a while once I'm more comfortable.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="birthchart-row">
+        <div class="birthchart-item">
+            <h3>Pisces Mercury</h3>
+            <div class="image-container">
+                <img src="../peeps/PiscesMerc.png" alt="Pisces Mercury symbol">
+                <div class="hover-overlay">
+                    <p>I prefer to communicate in person, but through calling and texting.</p>
+                </div>
+            </div>
+        </div>
+        <div class="birthchart-item">
+            <h3>Aquarius Venus</h3>
+            <div class="image-container">
+                <img src="../peeps/AquaVenus.png" alt="Aquarius Venus symbol">
+                <div class="hover-overlay">
+                    <p>My love language is physical touch.</p>
+                </div>
+            </div>
+        </div>
+        <div class="birthchart-item">
+            <h3>Capricorn Mars</h3>
+            <div class="image-container">
+                <img src="../peeps/CapMars.png" alt="Capricorn Mars symbol">
+                <div class="hover-overlay">
+                    <p>To pursue my goals, I create a plan, check things off, and keep an eye out for things that I should work on.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="birthchart-row">
+        <div class="birthchart-item">
+            <h3>Leo Jupiter</h3>
+            <div class="image-container">
+                <img src="../peeps/LeoJupiter.png" alt="Leo Jupiter symbol">
+                <div class="hover-overlay">
+                    <p>Self-improvement and growth for me is asking hard questions, having to be honest, revisiting the past with new perspecitives.</p>
+                </div>
+            </div>
+        </div>
+        <div class="birthchart-item">
+            <h3>Gemini Saturn</h3>
+            <div class="image-container">
+                <img src="../peeps/GemSaturn.png" alt="Gemini Saturn symbol">
+                <div class="hover-overlay">
+                    <p>When it comes to responsibility and commitments, I consider myself to be on top of things through thinking and planning ahead.</p>
+                </div>
+            </div>
+        </div>
+        <div class="birthchart-item">
+            <h3>Aquarius Uranus</h3>
+            <div class="image-container">
+                <img src="../peeps/AquaUranus.png" alt="Aquarius Uranus symbol">
+                <div class="hover-overlay">
+                    <p>I welcome change and innovation, I believe it welcomes new experiences into your life.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="birthchart-row">
+        <div class="birthchart-item">
+            <h3>Aquarius Neptune</h3>
+            <div class="image-container">
+                <img src="../peeps/AquaNept.png" alt="Aquarius Neptune symbol">
+                <div class="hover-overlay">
+                    <p>I approach dreams and aspirations with understanding that one day they could become a reality.</p>
+                </div>
+            </div>
+        </div>
+        <div class="birthchart-item">
+            <h3>Sagittarius Pluto</h3>
+            <div class="image-container">
+                <img src="../peeps/SagPluto.png" alt="Sagittarius Pluto symbol">
+                <div class="hover-overlay">
+                    <p>I try to keep in mind that change is what prevents life from feeling so still. It is bittersweet that certain things are no longer the same.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="get-to-know">
+    <h2>Get to Know Nicole Deeper</h2>
+    <p>Listen to Nicole share something unexpected...</p>
+    <audio controls>
+        <source src="../voice/Nicole.mp3" type="audio/mpeg">
+    </audio>
+</section>
+
+<a href="./gallery.html" class="back-button">Back to Gallery</a>
+
+</body>
+</html>
